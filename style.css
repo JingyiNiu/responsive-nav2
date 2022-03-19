@@ -1,0 +1,66 @@
+#toggle{
+    display: none;
+}
+
+body{
+    margin: 0;
+    padding: 0;
+    color: #fff;
+}
+ul{
+    margin: 0;
+    padding: 0;
+}
+ul li{
+    list-style: none;
+}
+a{
+    text-decoration: none;
+    color: #fff;
+}
+nav{
+    background-color: blueviolet;
+    padding: 10px;
+    position: relative;
+}
+nav .toggle{
+    position: absolute;
+    right: 0;
+    top: 0;
+    cursor: pointer;
+    margin: 10px;
+}
+nav .toggle .close{
+    display: none;
+}
+
+nav .nav-list{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+nav .nav-list li{
+    display: none;
+}
+nav .nav-list li:first-child{
+    display: block;
+}
+
+nav #toggle:checked ~ .nav-list li{
+    display: block;
+}
+
+@media(min-width:800px){
+    nav .toggle{
+        display: none;
+    }
+    nav .nav-list{
+        flex-direction: row;
+        justify-content: end;
+    }
+    nav .nav-list li{
+        display: flex;
+    }
+    nav .nav-list li:first-child{
+margin-right: auto;    }
+}
